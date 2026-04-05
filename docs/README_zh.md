@@ -76,6 +76,18 @@
 
 ---
 
+## 📓 交互式训练笔记本
+
+以下是按模型架构分类的 Colab 笔记本。您可以直接在浏览器中运行从数据准备到训练和推理的整个管道。所有笔记本都存储在仓库的 [`train_code`](../train_code/) 目录下。
+
+### 🌟 核心笔记本
+
+| 🤖 模型架构 | 🛠️ 训练管道 | 🚀 快速启动 (一键运行) |
+| :--- | :--- | :---: |
+| **Qwopus3.5 (27B)** | SFT / LoRA | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jackrong/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwopus3-5-27b-Colab.ipynb) |
+
+---
+
 ## 📚 高保真蒸馏数据集
 
 高质量的数据是模型有效适配的核心驱动力。与我们的训练代码并行，本仓库提供了 **24 个经过精心整理的高保真数据集**的获取方式，这些数据特地被收集和蒸馏，以增强模型的推理、编程及对话能力。

@@ -76,7 +76,17 @@ Below is the planned support matrix for upcoming model families:
 
 ---
 
+## 📓 Interactive Training Notebooks
 
+Below are the Colab notebooks, organized by model architecture. You can run the entire pipeline—from data preparation to training and inference—directly in your browser. All notebooks are available in the [`train_code`](./train_code/) repository folder.
+
+### 🌟 Main Notebooks
+
+| 🤖 Model Architecture | 🛠️ Pipeline | 🚀 Quick Setup (1-Click Run) |
+| :--- | :--- | :---: |
+| **Qwopus3.5 (27B)** | SFT / LoRA | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jackrong/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwopus3-5-27b-Colab.ipynb) |
+
+---
 
 ## 📚 High-Fidelity Distillation Datasets
 

@@ -76,6 +76,18 @@
 
 ---
 
+## 📓 インタラクティブなトレーニングノートブック
+
+以下は、モデルアーキテクチャ別に整理された Colab ノートブックです。データ準備からトレーニング、推論に至るまでのパイプライン全体をブラウザで直接実行できます。すべてのノートブックは、リポジトリの [`train_code`](../train_code/) ディレクトリに保存されています。
+
+### 🌟 メインノートブック
+
+| 🤖 モデルアーキテクチャ | 🛠️ パイプライン | 🚀 クイックセットアップ (1-Click 実行) |
+| :--- | :--- | :---: |
+| **Qwopus3.5 (27B)** | SFT / LoRA | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jackrong/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwopus3-5-27b-Colab.ipynb) |
+
+---
+
 ## 📚 高精度な蒸留データセット
 
 効果的なモデルの適応には、高品質なデータが不可欠です。本リポジトリでは、トレーニングコードと並行して、推論、コーディング、および対話能力を最適化するために収集および「蒸留」された**厳選された24の高精度データセット**を利用することができます。

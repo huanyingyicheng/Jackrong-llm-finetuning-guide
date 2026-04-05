@@ -76,6 +76,18 @@
 
 ---
 
+## 📓 대화형 학습 노트북
+
+아래는 모델 아키텍처별로 정리된 Colab 노트북입니다. 데이터 준비부터 학습, 추론까지의 전체 파이프라인을 브라우저에서 직접 실행할 수 있습니다. 모든 노트북은 저장소의 [`train_code`](../train_code/) 폴더에 저장되어 있습니다.
+
+### 🌟 메인 노트북
+
+| 🤖 모델 아키텍처 | 🛠️ 파이프라인 | 🚀 빠른 설정 (1-Click 실행) |
+| :--- | :--- | :---: |
+| **Qwopus3.5 (27B)** | SFT / LoRA | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jackrong/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwopus3-5-27b-Colab.ipynb) |
+
+---
+
 ## 📚 고품질 증류 데이터셋
 
 효과적인 모델 파인튜닝의 핵심 엔진은 고품질의 데이터입니다. 당사의 학습 코드와 병행하여, 이 워크스페이스는 모델의 추론, 프로그래밍 및 대화 기능을 강화하기 위해 특별히 수집되고 정제된 **24개의 선별된 고품질 증류 데이터셋**을 이용할 수 있도록 제공합니다.
