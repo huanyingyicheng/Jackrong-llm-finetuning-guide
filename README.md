@@ -88,6 +88,15 @@ Below are the Colab notebooks, organized by model architecture. You can run the 
 
 ---
 
+## 📖 Comprehensive Model Training Guide
+
+For a detailed, step-by-step PDF walkthrough of the entire Qwopus 3.5 fine-tuning process—including environment setup, data preparation, and optimization tips—please refer to our latest guide:
+
+> [!TIP]
+> **🔗 [Download Complete Guide: Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf](https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/guidePDF/Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf)**
+
+---
+
 ## 📚 High-Fidelity Distillation Datasets
 
 High-quality data is the engine of effective model adaptation. In parallel with our training code, this repository provides access to **24 curated, high-fidelity datasets** specifically collected and distilled to enhance model reasoning, coding, and conversational capabilities.

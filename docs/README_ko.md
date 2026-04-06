@@ -88,6 +88,15 @@
 
 ---
 
+## 📖 종합 모델 학습 가이드
+
+Qwopus 3.5 파인튜닝 프로세스 전체(환경 설정, 데이터 준비 및 최적화 팁 포함)에 대한 자세한 단계별 PDF 설명을 보려면 최신 가이드를 참조하십시오.
+
+> [!TIP]
+> **🔗 [전체 가이드 다운로드: Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf](https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/guidePDF/Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf)**
+
+---
+
 ## 📚 고품질 증류 데이터셋
 
 효과적인 모델 파인튜닝의 핵심 엔진은 고품질의 데이터입니다. 당사의 학습 코드와 병행하여, 이 워크스페이스는 모델의 추론, 프로그래밍 및 대화 기능을 강화하기 위해 특별히 수집되고 정제된 **24개의 선별된 고품질 증류 데이터셋**을 이용할 수 있도록 제공합니다.

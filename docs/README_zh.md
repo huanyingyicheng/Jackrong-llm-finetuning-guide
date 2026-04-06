@@ -88,6 +88,15 @@
 
 ---
 
+## 📖 全链路模型训练指南
+
+如需了解 Qwopus 3.5 全链路微调过程的详细步骤（包括环境配置、数据准备以及优化技巧），请参阅我们最新的 PDF 指南：
+
+> [!TIP]
+> **🔗 [下载完整指南：Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf](https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/guidePDF/Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf)**
+
+---
+
 ## 📚 高保真蒸馏数据集
 
 高质量的数据是模型有效适配的核心驱动力。与我们的训练代码并行，本仓库提供了 **24 个经过精心整理的高保真数据集**的获取方式，这些数据特地被收集和蒸馏，以增强模型的推理、编程及对话能力。

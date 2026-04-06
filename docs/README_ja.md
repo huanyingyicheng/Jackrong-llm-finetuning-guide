@@ -88,6 +88,15 @@
 
 ---
 
+## 📖 総合モデルトレーニングガイド
+
+Kwopus 3.5 のファインチューニングプロセス全体（環境設定、データ準備、最適化のヒントを含む）の詳細なステップバイステップ PDF ウォークスルーについては、最新のガイドを参照してください。
+
+> [!TIP]
+> **🔗 [フルガイドをダウンロード: Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf](https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/guidePDF/Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf)**
+
+---
+
 ## 📚 高精度な蒸留データセット
 
 効果的なモデルの適応には、高品質なデータが不可欠です。本リポジトリでは、トレーニングコードと並行して、推論、コーディング、および対話能力を最適化するために収集および「蒸留」された**厳選された24の高精度データセット**を利用することができます。
