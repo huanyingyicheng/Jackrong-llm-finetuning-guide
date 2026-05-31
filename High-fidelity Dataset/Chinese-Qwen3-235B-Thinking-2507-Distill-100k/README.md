@@ -185,7 +185,7 @@ Construction details:
 - **Scale**: Initially ~110,000 seed questions. After cleaning and filtering, ~100,000 high-quality samples remain.  
 - **Generation setup**: Distillation followed Qwen3 official recommended parameters (**temperature = 0.6**, **Top_P = 0.95**). No additional system prompts were used, ensuring the **native reasoning chains** and **answers** of the teacher model are faithfully preserved.  
 - **Cleaning process**: Two rounds of pre- and post-distillation cleaning removed empty samples, malformed structures, and redundant entries, ensuring overall consistency and usability.  
-- **Teacher environment**: All data was generated using the **openRoot full-powered Qwen-3-235B-A22B-Thinking-2507**, with a **32K context window**, enabling support for long-context tasks. 
+- **Teacher environment**: All data was generated using **OpenRouter's full-powered Qwen-3-235B-A22B-Thinking-2507**, with a **32K context window**, enabling support for long-context tasks. 
 - **Providers**: Cerebras, novitaAI, Chutes
 
 ---
@@ -303,5 +303,4 @@ This dataset builds upon multiple open-source projects and research efforts. We 
 - **gavinluo/applied_math**  
 
 > This project reorganized, cleaned, and distilled these sources, resulting in **Chinese-Qwen3-235B-Thinking-2507-Distill-100k**. We deeply appreciate the contributions of the community and researchers.  
-
 

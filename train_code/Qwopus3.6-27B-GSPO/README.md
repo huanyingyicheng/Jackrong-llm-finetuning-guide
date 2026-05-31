@@ -195,12 +195,14 @@ Merged export is disabled by default:
 
 ```bash
 export EXPORT_MERGED_16BIT_LOCAL=True
-python qwopus3_6_27b_gspo_training.py export-16bit
+python qwopus3_6_27b_gspo_training.py train
 ```
 
-The script uses Unsloth's `save_pretrained_merged(...,
-save_method="merged_16bit")` when available, otherwise it falls back to PEFT's
-`merge_and_unload()` path.
+The script runs merged export after a real training run, while the trained model
+object is still in memory. The standalone `export-16bit` command intentionally
+exits with guidance because it does not reload a PEFT model from disk. The merge
+uses Unsloth's `save_pretrained_merged(..., save_method="merged_16bit")` when
+available, otherwise it falls back to PEFT's `merge_and_unload()` path.
 
 ## Push Merged 16-Bit Model to Hugging Face
 

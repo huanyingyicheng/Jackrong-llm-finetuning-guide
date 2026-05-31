@@ -894,20 +894,22 @@ def process_job(
     prepare_target(job, token, job_log)
     ensure_mtp(job, token, job_log)
 
-    api = HfApi(token=token) if job.output_repo else None
+    api = HfApi(token=token) if (job.output_repo and args.upload_strategy != "local-only") else None
     remote_existing: set[str] = set()
     if job.output_repo and api is not None:
-        remote_existing = ensure_repo(api, job.output_repo, token, private, job_log)
-        write_readme(job, api, token, private, job_log, max_retries)
+        try:
+            remote_existing = set(api.list_repo_files(repo_id=job.output_repo, repo_type="model", token=token))
+        except Exception:
+            pass
 
     uploaded = set(remote_existing)
-    if job.output_repo:
+    if job.output_repo and api is not None:
         remaining = [qtype for qtype in job.quant_types if gguf_name(job, qtype) not in uploaded]
     else:
         remaining = job.quant_types
     if not remaining:
         log("All expected GGUF files already exist remotely.", job_log)
-        if cleanup_after_upload and job.output_repo:
+        if cleanup_after_upload and job.output_repo and args.upload_strategy != "local-only":
             cleanup_job(job, uploaded, job_log)
         log(f"===== Finished {job.filename_prefix} =====", job_log)
         return
@@ -923,6 +925,13 @@ def process_job(
             ctx_size=args.smoke_ctx_size,
             job_log=job_log,
         )
+
+    # Delay repository creation and README writing until conversion and smoke tests succeed
+    if job.output_repo and api is not None:
+        remote_existing = ensure_repo(api, job.output_repo, token, private, job_log)
+        write_readme(job, api, token, private, job_log, max_retries)
+        uploaded.update(remote_existing)
+
 
     local_outputs: list[Path] = []
     for qtype in job.quant_types:

@@ -1463,8 +1463,13 @@ def main() -> None:
     elif args.command == "train":
         _, model, tokenizer = start_or_resume_training(config)
         export_lora(model, tokenizer, config.export)
+        export_merged_16bit_local(model, tokenizer, config.export)
     elif args.command == "export-16bit":
-        export_merged_16bit_local(None, None, config.export)
+        raise SystemExit(
+            "export-16bit requires the live trained model object. Run `train` with "
+            "EXPORT_MERGED_16BIT_LOCAL=True, or call export_merged_16bit_local(...) "
+            "from an interactive session immediately after training."
+        )
     elif args.command == "push-16bit":
         push_merged_16bit_to_hub(config.export)
     elif args.command == "export-gguf-q8":

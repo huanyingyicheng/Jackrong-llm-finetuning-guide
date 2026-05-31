@@ -156,10 +156,14 @@ python qwopus3_6_27b_gspo_training.py train
 14. Export 16-bit merged model locally
 --------------------------------------
 
-This is heavy and disabled by default. After a real training run:
+This is heavy and disabled by default. Enable it before a real training run so
+the merge happens while the trained model is still in memory:
 
 export EXPORT_MERGED_16BIT_LOCAL=True
-python qwopus3_6_27b_gspo_training.py export-16bit
+python qwopus3_6_27b_gspo_training.py train
+
+The standalone export-16bit command does not reload a PEFT model from disk; it
+exits with guidance instead of failing with a None model/tokenizer error.
 
 15. Compile or install llama.cpp for GGUF conversion
 ----------------------------------------------------

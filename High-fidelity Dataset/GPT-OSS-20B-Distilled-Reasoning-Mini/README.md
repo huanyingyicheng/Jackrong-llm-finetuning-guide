@@ -13,7 +13,7 @@ language:
 
 ![image/jpeg](https://cdn-uploads.huggingface.co/production/uploads/66309bd090589b7c65950665/yuc6SULgg2DNRDJQrGB5l.jpeg)
 
-# Dataset Card for Dataset Name
+# Dataset Card for GPT-OSS-20B Distilled Reasoning Dataset Mini
 GPT-OSS-20B Distilled Reasoning Dataset Mini
 * (Multi-stage Evaluative Refinement Method for Reasoning Generation)
 ## Dataset Details and Description
@@ -21,7 +21,7 @@ This is a high-quality instruction fine-tuning dataset constructed through knowl
 I generated this dataset through a meticulously designed three-stage process:
 - **Seed Question Aggregation:** I extensively gathered and filtered seed questions from multiple high‑quality data sources, including self‑generated ones.
 
-- **Knowledge Distillation & Cleaning:** I used `opeanai/gpt-oss-20b` (High) as the teacher model to generate in‑depth reasoning and responses for the seed questions, which then underwent a rigorous automated cleaning process.
+- **Knowledge Distillation & Cleaning:** I used `openai/gpt-oss-20b` (High) as the teacher model to generate in‑depth reasoning and responses for the seed questions, which then underwent a rigorous automated cleaning process.
 
 - **LLM‑as‑a‑Judge Quality Assessment:** I employed `Qwen/Qwen3-235B-A22B-Instruct-2507` as the judge model to score the generated data across multiple dimensions, ensuring the quality of the final output.
 
@@ -83,7 +83,7 @@ This process resulted in **1,990 high-quality questions** for final distillation
 This phase forms the core of generating high-quality chain-of-thought (CoT) content. The entire workflow ensures that **both inputs and outputs undergo rigorous quality verification** – not merely cleaning the inputs, but systematically validating the outputs.  
 
 - **Distillation Generation**:  
-  I employed `opeanai/gpt-oss-20b(High)` as the teacher model. For each seed question, a specially designed prompt template was used to explicitly instruct the model to:  
+  I employed `openai/gpt-oss-20b(High)` as the teacher model. For each seed question, a specially designed prompt template was used to explicitly instruct the model to:  
   (1) Conduct detailed **"Think step-by-step" chain-of-thought reasoning**, followed by  
   (2) Delivering the final answer.  
   This structured approach guarantees comprehensive reasoning before conclusion.  
@@ -174,7 +174,7 @@ This dataset **does not include predefined train/validation/test splits**. Users
 # Acknowledgments
 The creation of this dataset was made possible by the following outstanding open-source models and datasets. We extend our sincere gratitude:
 
-- **Teacher Model**: `opeanai/gpt-oss-20b`  
+- **Teacher Model**: `openai/gpt-oss-20b`  
 - **Judge Model**: `Qwen/Qwen3-235B-A22B-Instruct-2507`  
 - **Seed Question Sources**:  
   `facebook/natural_reasoning`,  
